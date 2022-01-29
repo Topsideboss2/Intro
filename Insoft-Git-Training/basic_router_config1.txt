@@ -1,0 +1,38 @@
+en
+conf t
+enable secret Topsideboss2
+
+
+hostname My-Router
+
+
+line console 0
+password Murii
+login
+exit
+
+
+line aux 0
+password Murii
+login
+exit
+
+
+line vty 0 4
+password Murii
+login
+
+
+interface GigabitEthernet 0/0
+ip address 100.100.100.1 255.255.255.252
+no shutdown
+exit
+
+
+interface GigabitEthernet 0/1
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
+
+
+wr
